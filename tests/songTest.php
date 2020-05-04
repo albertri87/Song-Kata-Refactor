@@ -1,6 +1,12 @@
 <?php
 
-$song = "There was an old lady who swallowed a fly.\n" .
+
+use codeDojo\Song;
+use PHPUnit\Framework\TestCase;
+
+class songTest extends TestCase {
+
+    const SONG = "There was an old lady who swallowed a fly.\n" .
     "I don't know why she swallowed a fly - perhaps she'll die!\n" .
     "\n" .
     "There was an old lady who swallowed a spider;\n" .
@@ -41,4 +47,10 @@ $song = "There was an old lady who swallowed a fly.\n" .
     "There was an old lady who swallowed a horse...\n" .
     "...She's dead, of course!";
 
-echo $song;
+    public function testSongRefactOutput() {
+        $song = new Song(['fly', 'spider', 'bird', 'cat', 'dog', 'cow', 'horse']);
+        $this->expectOutputString(self::SONG);
+        $song->getSong();
+    }
+
+}

@@ -1,0 +1,23 @@
+{
+    "name": "raone/code-dojo-39",
+    "authors": [
+        {
+            "name": "Albert",
+            "email": "albert_sanchezbcn@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "codeDojo\\": "src"
+        }
+    },
+    "require": {
+        "PHP": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "scripts": {
+        "run": "vendor/bin/phpunit tests songTest"
+    }
+}
